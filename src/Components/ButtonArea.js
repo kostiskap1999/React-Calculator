@@ -1,6 +1,7 @@
 import React from 'react';
 
-import '../Assets/Styles/Button.css';
+import '../Assets/Styles/Components/Button.scss';
+import '../Assets/Styles/Components/ButtonArea.scss';
 
 import { CalcButton } from './CalcButton';
 
@@ -19,7 +20,7 @@ export class ButtonArea extends React.Component {
     this.state.value = this.props.value;
 
     return(
-      <div>
+      <div className='buttonArea'>
         <CalcButton value='1' />
         <CalcButton value='2' />
         <CalcButton value='3' />
@@ -29,7 +30,9 @@ export class ButtonArea extends React.Component {
         <CalcButton value='7' />
         <CalcButton value='8' />
         <CalcButton value='9' />
+        <CalcButton value='+/-' />
         <CalcButton value='0' />
+        <CalcButton value='.' />
 
       </div>
     )

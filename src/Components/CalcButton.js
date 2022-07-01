@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Assets/Styles/Button.css';
+import '../Assets/Styles/Components/Button.scss';
 
 
 export class CalcButton extends React.Component {

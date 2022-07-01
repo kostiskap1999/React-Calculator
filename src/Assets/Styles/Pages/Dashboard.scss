@@ -1,0 +1,9 @@
+$center-panel-width: 350px;
+$center-panel-height: 250px;
+
+.center {
+    position:absolute;
+    top: calc(50% - $center-panel-height);
+    left: calc(50% - $center-panel-width/2);
+    max-width: $center-panel-width;
+}

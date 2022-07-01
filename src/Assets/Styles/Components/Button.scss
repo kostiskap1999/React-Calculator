@@ -1,0 +1,14 @@
+.calculatorButton {
+    margin: 1px;
+    padding: 10px;
+    background-color: orange;
+    border: none;
+    height: 80px;
+    width: 80px;
+    font-size: 23px;
+    color: white;
+
+    &:active {
+        background-color: orangered;
+    }
+}

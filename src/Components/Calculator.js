@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Assets/Styles/Calculator.css';
+import '../Assets/Styles/Components/Calculator.scss';
 
 import { ButtonArea } from './ButtonArea';
 import { CalcScreen } from './CalcScreen';

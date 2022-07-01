@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Assets/Styles/Dashboard.css'
+import '../Assets/Styles/Pages/Dashboard.scss'
 
 import { Calculator } from '../Components/Calculator.js'
 

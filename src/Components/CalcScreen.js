@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../Assets/Styles/Button.css';
+import '../Assets/Styles/Components/Screen.scss';
 
 
 export class CalcScreen extends React.Component {
@@ -8,14 +8,14 @@ export class CalcScreen extends React.Component {
     super(props);
 
     this.state = {
-      value: '222'
+      value: ''
     }
   };
 
   render(){
     return(
-      <div>
-        <input type='text' />   
+      <div className='calculatorScreen'>
+        <input className='screenInput' type='text' />   
       </div>
     )
   }

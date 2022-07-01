@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import './Assets/Styles/index.css';
+import './Assets/Styles/index.scss';
 
 import { Dashboard } from './Pages/Dashboard.js';
 
