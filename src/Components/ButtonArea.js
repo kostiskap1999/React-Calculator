@@ -3,7 +3,7 @@ import React from 'react';
 import '../Assets/Styles/Components/Button.scss';
 import '../Assets/Styles/Components/ButtonArea.scss';
 
-import { CalcButton } from './CalcButton';
+import { CalcButton } from './Button';
 
 
 export class ButtonArea extends React.Component {
