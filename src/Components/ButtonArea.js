@@ -7,17 +7,7 @@ import { CalcButton } from './Button';
 
 
 export class ButtonArea extends React.Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      value: ''
-    }
-  };
-
   render(){
-    
-    this.state.value = this.props.value;
 
     return(
       <div className='buttonArea'>

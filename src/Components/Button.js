@@ -12,12 +12,17 @@ export class CalcButton extends React.Component {
     }
   };
 
+  handleClick() {
+
+  };
+
+
   render(){
 
-    this.state.value = this.props.value;
+    this.setState({value: this.props.value});
 
     return(
-        <button className='calculatorButton'>
+        <button className='calculatorButton' onClick={this.handleClick}>
           {this.state.value}
         </button>
     )

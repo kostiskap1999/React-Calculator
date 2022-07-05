@@ -7,10 +7,6 @@ import { CalcScreen } from './Screen';
 
 
 export class Calculator extends React.Component {
-  constructor(props){
-    super(props);
-  };
-
   render(){
     return(
       <div className='calculator'>
