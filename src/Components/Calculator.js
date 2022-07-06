@@ -7,11 +7,30 @@ import { CalcScreen } from './Screen';
 
 
 export class Calculator extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      screenValue: ''
+    }
+  };
+
+  addScreenValue(value) {
+    var screenValue = this.state.screenValue + value;
+    this.setState({screenValue: screenValue})
+  }
+
+  setScreenValue(value) {
+    var screenValue = value;
+    this.setState({screenValue: screenValue})
+  }
+
+
   render(){
     return(
       <div className='calculator'>
-        <CalcScreen />
-        <ButtonArea />
+        <CalcScreen screenValue={this.state.screenValue} setScreenValue={this.setScreenValue.bind(this)} />
+        <ButtonArea addScreenValue={this.addScreenValue.bind(this)} />
       </div>
     )
   }

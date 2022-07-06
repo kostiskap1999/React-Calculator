@@ -7,22 +7,29 @@ import { CalcButton } from './Button';
 
 
 export class ButtonArea extends React.Component {
+
+
+  
+  addScreenValue(value) {
+    this.props.addScreenValue(value);
+  };
+
   render(){
 
     return(
       <div className='buttonArea'>
-        <CalcButton value='1' />
-        <CalcButton value='2' />
-        <CalcButton value='3' />
-        <CalcButton value='4' />
-        <CalcButton value='5' />
-        <CalcButton value='6' />
-        <CalcButton value='7' />
-        <CalcButton value='8' />
-        <CalcButton value='9' />
-        <CalcButton value='+/-' />
-        <CalcButton value='0' />
-        <CalcButton value='.' />
+        <CalcButton value='1' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='2' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='3' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='4' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='5' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='6' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='7' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='8' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='9' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='+/-' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='0' addScreenValue={this.addScreenValue.bind(this)} />
+        <CalcButton value='.' addScreenValue={this.addScreenValue.bind(this)} />
 
       </div>
     )

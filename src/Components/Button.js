@@ -8,21 +8,13 @@ export class CalcButton extends React.Component {
     super(props);
 
     this.state = {
-      value: ''
+      value: this.props.value
     }
   };
 
-  handleClick() {
-
-  };
-
-
   render(){
-
-    this.setState({value: this.props.value});
-
     return(
-        <button className='calculatorButton' onClick={this.handleClick}>
+        <button className='calculatorButton' onClick={() => this.props.addScreenValue(this.state.value)} >
           {this.state.value}
         </button>
     )
