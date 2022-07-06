@@ -26,9 +26,8 @@ export class CalcScreen extends React.Component {
 
     const consecSymbols = consecSymbolsRegex.exec(result);
 
-    if(consecSymbols != null){
+    if(consecSymbols != null)
       result = result.replace(consecSymbols[0], consecSymbols[0].substring(consecSymbols[0].length - 1))
-    }      
     else
       result = result.replace(nonAcceptableRegex, '');
     
@@ -37,9 +36,12 @@ export class CalcScreen extends React.Component {
 
   render(){
     return(
-      <div className='calculatorScreen'>
-        <input className='screenInput' type='text' value={this.props.screenValue}  onChange={this.handleChange}/>   
-      </div>
+        <div className='calculatorScreen'>
+          <input className='screenInput' type='text' value={this.props.screenValue}  onChange={this.handleChange}/>   
+          <div className='resultText'>
+            {this.props.result}
+          </div>
+        </div>
     )
   }
 };

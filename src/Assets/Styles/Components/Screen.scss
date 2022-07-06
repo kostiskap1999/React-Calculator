@@ -3,7 +3,7 @@
 $calculator-screen-width: 100%;
 
 .calculatorScreen {
-    height: 80px;
+    // height: 80px;
     width: $calculator-screen-width;
     font-size: 23px;
     color: white;
@@ -19,3 +19,12 @@ $calculator-screen-width: 100%;
     padding: 10px;
 }
 
+.resultText {
+    box-sizing: border-box;
+    font-size: 28px;
+    font-weight: 700;
+    color: green;
+    text-align: right;
+    overflow-x: auto;
+    margin: 20px;
+}
