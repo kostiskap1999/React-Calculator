@@ -1,6 +1,10 @@
+@import '../Pages/Dashboard.scss';
 $calculator-padding: 35px;
+
 
 .calculator {
     border: 1px solid #282c34;
     padding: $calculator-padding;
+    min-width: $center-panel-width;
+    min-height: $center-panel-height;
 }

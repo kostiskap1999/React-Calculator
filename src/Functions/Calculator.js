@@ -42,11 +42,23 @@ export function calculate(expr) {
 
     var result = 0;
 
-    if(numbers == null || operations == null)
-        return expr;
+    if(numbers == null)
+        return 0;
 
+    if (operations == null)
+        return parseFloat(expr)
+        
     if (numbers.length === 0 || expr.match(regexWhole)[0].length !== expr.length)
         return "Wrong Expression";
+
+    if (numbers.length === operations.length){
+        console.log(numbers)
+        if (operations[operations.length-1] === ADD || operations[operations.length-1] === SUB)
+            numbers[numbers.length] = 0;
+        else
+            numbers[numbers.length] = 1;
+        console.log(numbers)
+    }
 
     var i;
     //while there are operations

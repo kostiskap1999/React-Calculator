@@ -21,8 +21,8 @@ export class Calculator extends React.Component {
     var screenValue = this.state.screenValue + value;
     this.setState({screenValue: screenValue})
 
-    if(isExpressionFinished(value))
-      this.setState({result: calculate(value)})
+    // if(isExpressionFinished(value))
+      this.setState({result: calculate(screenValue)})
       
   }
 
@@ -30,8 +30,8 @@ export class Calculator extends React.Component {
     var screenValue = value;
     this.setState({screenValue: screenValue})
     
-    if(isExpressionFinished(value))
-      this.setState({result: calculate(value)})
+    // if(isExpressionFinished(value))
+      this.setState({result: calculate(screenValue)})
   }
 
 
