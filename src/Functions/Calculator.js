@@ -23,17 +23,17 @@ const POW_ALT = "**"
 
 const op = new RegExp(`\\${ADD}|\\${SUB}|\\${MUL}|\\${DIV}|\\${POW}`, 'g')
 
+export function isInputValid(expr) {
+    
+    const nonAcceptableRegex = new RegExp(`[^0-9\\+\\-\\*\\/\\%\\^\\!\\.]`, 'gi');
+    const consecSymbolsRegex = new RegExp(`[\\+\\-\\*\\/\\%\\^\\!\\.]{2,}`, 'gi');
 
-//if there are as many numbers as operations, the user did not input the last operand so the calculation is incomplete
-export function isExpressionFinished(expr) {
-    var numbers = expr.match(ID);
-    var operations = expr.match(op);
-
-    if(numbers == null || operations == null)
-        return true;
-
-    return numbers.length !== operations.length ? true : false;
+    if(nonAcceptableRegex.test(expr) || consecSymbolsRegex.test(expr))
+        return false
+    else
+        return true
 }
+
 
 export function calculate(expr) { 
     var numbers = expr.match(ID);
@@ -45,13 +45,13 @@ export function calculate(expr) {
     if(numbers == null)
         return 0;
 
-    if(expr[0] == ADD || expr[0] == SUB)
+    if(expr[0] === ADD || expr[0] === SUB)
         numbers.unshift(0)
     else if(expr.match(regexWhole)[0].length !== expr.length)
         return "Wrong Expression";
     
     if (operations == null)
-        result = expr;
+        result = parseFloat(expr);
     else{
         if (numbers.length === operations.length)
             if (operations[operations.length-1] === ADD || operations[operations.length-1] === SUB)
@@ -84,6 +84,7 @@ export function calculate(expr) {
 
     }
 
+    console.log(typeof(result))
     
     var largeNumberRegex = new RegExp(`e+`, 'g')
 

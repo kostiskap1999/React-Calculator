@@ -4,7 +4,7 @@ import '../Assets/Styles/Components/Calculator.scss';
 
 import { ButtonArea } from './ButtonArea';
 import { CalcScreen } from './Screen';
-import { calculate, isExpressionFinished } from '../Functions/Calculator';
+import { calculate, isInputValid } from '../Functions/Calculator';
 
 
 export class Calculator extends React.Component {
@@ -18,20 +18,19 @@ export class Calculator extends React.Component {
   };
 
   addScreenValue(value) {
-    var screenValue = this.state.screenValue + value;
-    this.setState({screenValue: screenValue})
-
-    // if(isExpressionFinished(value))
-      this.setState({result: calculate(screenValue)})
-      
+    if(isInputValid(value)) {
+      var screenValue = this.state.screenValue + value;
+      this.setState({screenValue: screenValue})
+      this.setState({result: calculate(screenValue)}) 
+    }      
   }
 
   setScreenValue(value) {
-    var screenValue = value;
-    this.setState({screenValue: screenValue})
-    
-    // if(isExpressionFinished(value))
+    if(isInputValid(value)){
+      var screenValue = value;
+      this.setState({screenValue: screenValue})
       this.setState({result: calculate(screenValue)})
+    }      
   }
 
 
@@ -43,4 +42,4 @@ export class Calculator extends React.Component {
       </div>
     )
   }
-};
+}
